@@ -1,0 +1,34 @@
+/* Flexbox layout for positioning */
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  height: 100vh;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  flex: auto;
+}
+
+article {
+  flex: 2;
+  overflow-y: auto;
+  padding: 10px;
+  background-color: #f0f0f0;
+}
+
+aside {
+  flex: 1;
+  overflow-y: auto;
+  padding: 10px;
+  background-color: #e0e0e0;
+}
+
+header, footer {
+  padding: 20px;
+  background-color: #ccc;
+  text-align: center;
+}
