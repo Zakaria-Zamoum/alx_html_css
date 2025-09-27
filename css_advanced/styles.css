@@ -16,7 +16,7 @@ body {
   max-width: 1440px;
   margin: 0 auto;
   position: relative;
-  overflow: visible; /* allow scrolling */
+  overflow: visible;
 }
 
 /* Header styles */
@@ -52,7 +52,7 @@ nav ul {
 nav ul li a {
   color: #fff;
   text-decoration: none;
-  font-weight: 700; /* bold */
+  font-weight: 700;
   transition: color 0.3s ease;
 }
 
@@ -64,7 +64,7 @@ nav ul li a:hover {
 .banner {
   position: relative;
   background: url('Object.png') top center / cover no-repeat;
-  min-height: 1250px; /* enough for images + text */
+  min-height: 1250px;
   height: auto;
   color: #fff;
   margin: 0;
@@ -77,13 +77,13 @@ nav ul li a:hover {
   height: 100%;
 }
 
-/* Banner texts and positions */
+/* Banner texts */
 .banner .get-schooled {
   position: absolute;
   left: 377px;
   top: 220px;
   font-size: 120px;
-  font-weight: 700; /* bold */
+  font-weight: 700;
   color: #fff;
 }
 
@@ -91,7 +91,7 @@ nav ul li a:hover {
 .banner .grin,
 .banner .laugh {
   font-size: 16px;
-  font-weight: 700; /* bold */
+  font-weight: 700;
   color: #fff;
 }
 
@@ -99,22 +99,21 @@ nav ul li a:hover {
 .banner .grin { position: absolute; left: 704px; top: 361px; }
 .banner .laugh { position: absolute; left: 797px; top: 361px; }
 
-/* Learn from the pros with colored word */
 .banner .learn-pros {
   position: absolute;
   left: 604px;
   top: 631px;
   font-size: 32px;
-  font-weight: 300; /* from-pros light */
+  font-weight: 300;
 }
 
 .banner .learn-pros .learn-word {
-  font-weight: 700; /* bold */
+  font-weight: 700;
   color: #C271FF;
 }
 
 .banner .learn-pros .from-pros {
-  font-weight: 300; /* light */
+  font-weight: 300;
   color: #fff;
 }
 
@@ -130,7 +129,7 @@ button.register {
   border: none;
   border-radius: 22px;
   font-size: 16px;
-  font-weight: 600; /* semi-bold */
+  font-weight: 600;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -143,7 +142,7 @@ button.register:hover {
 .image-row {
   position: absolute;
   left: 217px;
-  top: 727px; /* top of images below banner text */
+  top: 727px;
   width: 1009px;
   display: flex;
   justify-content: space-between;
@@ -157,7 +156,6 @@ button.register:hover {
   max-width: 150px;
 }
 
-/* Images */
 .image-item img {
   width: 150px;
   height: 150px;
@@ -174,89 +172,92 @@ button.register:hover {
   font-size: 16px;
   color: #fff;
   text-align: center;
-  font-weight: 900; /* Black / very bold */
-  white-space: nowrap; /* single line */
+  font-weight: 900;
+  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-/* Description below names - 2 lines max, bottom aligned */
+/* Description below names - 2 lines max */
 .image-desc {
-  margin-top: 8px;            /* extra spacing from name */
+  margin-top: 8px;
   font-size: 16px;
   font-style: italic;
   color: #fff;
   text-align: center;
   line-height: 1.2;
-  height: 40px;               /* fixed height for 2 lines */
+  height: 40px;
   display: -webkit-box;
-  -webkit-line-clamp: 2;      /* limit to 2 lines */
+  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  justify-content: flex-end;   /* bottom-align last line */
   word-wrap: break-word;
 }
 
-/* Make 3rd description slightly smaller */
+/* Third description smaller */
 .image-item:nth-child(3) .image-desc {
-  font-size: 14px; /* smaller to fit in 2 lines */
+  font-size: 14px;
+}
+
+/* Testimonial Section - image and text separated by 53px */
+.testimonial-section {
+  width: 1440px;
+  height: 392px;
+  background-color: #C271FF;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-left: 259px; /* image starts here */
+}
+
+.testimonial-img {
+  width: 160px;
+  height: 160px;
+}
+
+.testimonial-container {
+  margin-left: 53px; /* space between image and text */
+  max-width: 730px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.testimonial-text {
+  font-size: 22px;
+  font-style: italic;
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+
+.testimonial-name {
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 15px;
+  margin-bottom: 2px;
+}
+
+.testimonial-job {
+  font-size: 16px;
+  font-weight: 400;
 }
 
 /* Responsive tweaks */
 @media (max-width: 768px) {
-  .page {
-    width: 100%;
-    height: auto;
-  }
-
-  header {
-    position: static;
-    padding: 20px;
-    width: 100%;
-  }
-
+  .page { width: 100%; height: auto; }
+  header { position: static; padding: 20px; width: 100%; }
   .logo img { height: 30px; width: auto; }
-
   nav ul { flex-direction: column; gap: 10px; }
-
-  .banner {
-    height: auto;
-    padding: 40px 20px;
-    background-size: cover;
-  }
-
+  .banner { height: auto; padding: 40px 20px; background-size: cover; }
   .banner .get-schooled,
   .banner .smile,
   .banner .grin,
   .banner .laugh,
-  .banner .learn-pros {
-    position: static;
-    text-align: center;
-    margin-bottom: 10px;
-  }
-
-  .banner .learn-pros .learn-word { font-weight: 700; color: #C271FF; }
-  .banner .learn-pros .from-pros { font-weight: 300; color: #fff; }
-
-  button.register {
-    position: static;
-    width: auto;
-    height: auto;
-    border-radius: 12px;
-    margin: 20px auto 0 auto;
-    display: block;
-  }
-
-  .image-row {
-    position: static;
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    margin-top: 20px;
-  }
-
-  .image-item img { width: 120px; height: 120px; }
-  .image-item { max-width: 120px; }
-  .image-desc { max-width: 120px; height: auto; justify-content: flex-start; -webkit-line-clamp: none; }
+  .banner .learn-pros { position: static; text-align: center; margin-bottom: 10px; }
+  .image-row { position: static; flex-wrap: wrap; justify-content: center; gap: 20px; }
+  button.register { position: static; margin: 10px auto; }
+  .testimonial-section { padding-left: 20px; flex-direction: column; align-items: flex-start; }
+  .testimonial-img { margin-bottom: 20px; }
 }
