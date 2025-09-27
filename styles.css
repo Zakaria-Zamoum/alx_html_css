@@ -452,3 +452,86 @@ button.register:hover {
     padding-top: 5px;
   }
 }
+.membership-section {
+  width: 100%;
+  max-width: 1440px;
+  height: 502px;
+  background-color: #071629;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 40px;
+  margin: 0 auto;
+  text-align: center;
+}
+.membership-title {
+  font-size: 32px;
+}
+
+.highlight-text {
+  font-weight: 700;
+  color: #C271FF;
+}
+
+.light-text {
+  font-weight: 400;
+  color: #fff;
+  margin-left: 8px;
+}
+.membership-title-wrapper {
+  width: 100%;
+  text-align: center;
+}
+.membership-row {
+  display: flex;
+  justify-content: center;
+  gap: 134px;
+  margin-top: 80px; 
+}
+}.membership-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.membership-icon {
+  width: 43.67px;
+  height: 35.35px;
+  object-fit: contain;
+}
+.membership-section {
+  padding-top: 40px; /* was 60px */
+}
+
+.membership-label {
+  margin-top: 12px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+}
+.membership-footer {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #fff;
+  text-align: center;
+  line-height: 1.4;
+}
+button.register {
+  width: 162px;
+  height: 44px;
+  background-color: #C271FF;
+  color: white;
+  border: none;
+  border-radius: 22px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 30px; /* ← add this to space it from the footer */
+}
+
+button.register:hover {
+  background-color: #a84de6;
+}
