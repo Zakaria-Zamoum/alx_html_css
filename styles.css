@@ -535,3 +535,44 @@ button.register {
 button.register:hover {
   background-color: #a84de6;
 }
+.faq-section {
+  height: 858px;
+  background-color: #fff;
+  padding-top: 80px;
+  text-align: center;
+}
+
+.faq-title {
+  font-size: 60px;
+  color: #071629;
+  font-weight: 300;
+  margin-bottom: 40px;
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 431.48px;
+  row-gap: 140px;
+  justify-content: center;
+  padding: 0 40px;
+}
+
+.faq-item {
+  max-width: 400px;
+  text-align: left;
+}
+
+.faq-question {
+  font-size: 16px;
+  font-weight: bold;
+  color: #071629;
+  margin-bottom: 16px;
+}
+
+.faq-answer {
+  font-size: 14px;
+  color: #071629;
+  opacity: 0.5;
+  line-height: 1.6;
+}
