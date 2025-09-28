@@ -129,7 +129,7 @@ nav ul li a:hover {
 button.register {
   position: absolute;
   left: 639px;
-  top: 419px;
+  top: 439px;
   width: 162px;
   height: 44px;
   background-color: #C271FF;
@@ -342,10 +342,12 @@ button.register:hover {
 /* Title color split */
 .dark-text {
   color: #071629;
+font-weight: 300;
 }
 
 .highlight-text {
   color: #C271FF;
+font-weight: 700;
 }
 
 /* Smile labels */
@@ -529,7 +531,7 @@ button.register {
   font-weight: 600;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  margin-top: 30px; /* ← add this to space it from the footer */
+  margin-top: -20px;
 }
 
 button.register:hover {
@@ -575,4 +577,46 @@ button.register:hover {
   color: #071629;
   opacity: 0.5;
   line-height: 1.6;
+}
+.footer-section {
+  height: 249px;
+  background-color: #071629;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-content {
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+}
+
+.footer-logo {
+  width: 169px;
+  height: 30px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 20px;
+}
+
+.social-icons img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.footer-copy {
+  font-size: 12px;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 80px;
+opacity: 0.3517;
 }
