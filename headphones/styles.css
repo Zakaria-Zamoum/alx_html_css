@@ -2,41 +2,34 @@
 body {
   margin: 0;
   font-family: 'Source Sans Pro', sans-serif;
-  background: url("images/headphones_hero_1.jpg") no-repeat center center fixed;
-  background-size: cover;
   color: #fff;
+  background-color: #000; /* fallback */
 }
 
 /* Container (hero) */
 .container {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 20px;
-  box-sizing: border-box;
-  position: relative;
-  height: 800px; /* fixed height for desktop */
+ position: relative;
+  height: 800px; /* desktop height */
+  background: url("images/headphones_hero_1.jpg") no-repeat center center;
+  background-size: cover;
 }
 
+/* Header */
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-left: -170px;   /* pushes logo further left */
-  margin-right: -0px;  /* pushes nav further right */
-}
-.logo-header {
-  position: static;
-}
-
-.nav {
-  position: static;
-  display: flex;
-  gap: 10px;
-margin-left:100px;
+  margin-left: 70px;   /* pushes logo further left */
+  margin-right: 50px;  /* pushes nav further right */
 }
 .logo-header img {
   height: 50px;
   display: block;
+}
+.nav {
+  display: flex;
+  gap: 10px;
+  margin-left: 100px;
 }
 .nav a {
   color: #fff;
@@ -55,6 +48,8 @@ margin-left:100px;
   display: none;
   cursor: pointer;
   z-index: 1001;
+  font-size: 28px;
+  color: #fff;
 }
 
 /* Hide the checkbox always */
@@ -107,10 +102,8 @@ margin-left:100px;
 .description-box {
   width: 637px;
   min-height: 114px;
-  height: auto;
   margin: 90px auto 0;
   background: transparent;
-  overflow: visible;
   padding: 10px;
   border-radius: 8px;
   box-sizing: border-box;
@@ -132,7 +125,6 @@ margin-left:100px;
   padding: 100px 20px;
   box-sizing: border-box;
   min-height: 600px;
-  height: auto;
 }
 .info-inner {
   max-width: 1200px;
@@ -192,7 +184,6 @@ margin-left:100px;
   padding: 100px 20px;
   box-sizing: border-box;
   min-height: 650px;
-  height: auto;
 }
 .hero-2-box {
   width: 637px;
@@ -210,11 +201,6 @@ margin-left:100px;
   gap: 60px;
   flex-wrap: wrap;
   justify-content: center;
-}
-.pentagon-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 .pentagon {
   width: 190px;
@@ -247,7 +233,6 @@ margin-left:100px;
   padding: 60px 20px;
   box-sizing: border-box;
   min-height: 400px;
-  height: auto;
 }
 .line-box {
   display: flex;
@@ -271,8 +256,6 @@ margin-left:100px;
   align-items: stretch;
   padding: 40px 20px;
   box-sizing: border-box;
-  min-height: 249px;
-  height: auto;
 }
 .social-top {
   display: flex;
@@ -310,22 +293,7 @@ margin-left:100px;
 /* ------------------------- */
 
 @media screen and (max-width: 1024px) {
-  .logo-header {
-    position: static;
-  }
-  .header {
-    position: relative;
-    padding: 20px 0;
-  }
-  .nav {
-    position: static;
-    right: auto;
-    gap: 16px;
-  }
-  .description-box {
-    width: 90%;
-    margin: 60px auto 0;
-  }
+  .description-box,
   .hero-2-box {
     width: 90%;
   }
@@ -333,20 +301,18 @@ margin-left:100px;
 
 @media screen and (max-width: 768px) {
   .container {
-    height: 869px;
+    height: 869px; /* fixed height for phone */
   }
 
   .header {
-    position: relative;
-    display: flex;
     justify-content: center;
     align-items: center;
     padding: 16px 0;
     padding-left: 60px; /* space for hamburger */
+    position: relative;
   }
 
   .logo-header {
-    position: static;
     margin: 0 auto;
   }
 
@@ -355,11 +321,9 @@ margin-left:100px;
     position: absolute;
     top: 20px;
     left: 20px;
-    font-size: 28px;
-    color: #fff;
   }
 
-.nav {
+  .nav {
     display: none;
     flex-direction: column;
     align-items: center;
@@ -377,15 +341,6 @@ margin-left:100px;
   #menu-toggle:checked + .hamburger + .nav {
     display: flex;
   }
-
-  .nav a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 700;
-    padding: 8px 12px;
-    display: block;
-  }
-
   .description-box {
     width: 92%;
     margin: 30px auto 0;
@@ -451,5 +406,4 @@ margin-left:100px;
     padding: 16px 0;
   }
 }
-
-/* End of stylesheet */
+ 
