@@ -2,11 +2,8 @@
 body {
   margin: 0;
   font-family: 'Source Sans Pro', sans-serif;
-  background: url("images/headphones_hero_1.jpg") no-repeat center center;
+  background: url("images/headphones_hero_1.jpg") no-repeat center center fixed;
   background-size: cover;
-  background-attachment: fixed;
-  background-position: center center;
-  min-height: 100vh;
   color: #fff;
 }
 
@@ -17,481 +14,172 @@ body {
   padding: 20px;
 }
 
-/* Header */
+/* Header (desktop) */
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 30px 0;
-  width: 100%;
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
+  top: 0; left: 0; right: 0;
 }
-
 .logo {
   position: absolute;
   left: 180px;
 }
-
-.logo img {
-  height: 50px;
-  width: auto;
-  display: block;
-}
-
+.logo img { height: 50px; display: block; }
 .nav {
   position: absolute;
   right: 200px;
   display: flex;
   gap: 20px;
 }
-
 .nav a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 700;
-  padding: 8px 12px;
-  transition: color 0.3s ease;
+  color: #fff; text-decoration: none; font-weight: 700;
+  padding: 8px 12px; transition: color 0.3s ease;
 }
-
-.nav a:hover,
-.nav a:active {
-  color: #FF6565;
-}
-
-/* Hamburger (desktop hidden, mobile shown) */
-.hamburger {
-  display: none;
-  font-size: 28px;
-  cursor: pointer;
-  position: absolute;
-  top: 30px;
-  left: 20px;
-  z-index: 1000;
-  color: #fff;
-}
+.nav a:hover, .nav a:active { color: #FF6565; }
+.hamburger { display: none; }
 
 /* Main hero */
 .main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  width: 90%;
-  max-width: 800px;
-  margin: 0 auto;
-  padding-top: 380px;
+  display: flex; flex-direction: column; align-items: center; text-align: center;
+  width: 90%; max-width: 800px; margin: 0 auto; padding-top: 380px;
 }
+.main h1 { font-size: 32px; font-weight: 700; margin-bottom: 20px; }
+.subheading { font-size: 16px; font-weight: 700; margin: 0; }
 
-.main h1 {
-  font-size: 32px;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-
-.subheading {
-  font-size: 16px;
-  font-weight: 700;
-  margin: 0;
-}
-
-/* Unified button style */
+/* Button */
 .cta-button {
-  background-color: #FF6565;
-  color: #fff;
-  border: none;
-  border-radius: 32px;
-  width: 162px;
-  height: 44px;
-  font-size: 14px;
-  font-weight: 700;
-  cursor: pointer;
-  margin-top: 60px; /* pushed down */
-  transition: opacity 0.3s ease;
+  background-color: #FF6565; color: #fff; border: none; border-radius: 32px;
+  width: 162px; height: 44px; font-size: 14px; font-weight: 700;
+  cursor: pointer; margin-top: 60px; transition: opacity 0.3s ease;
 }
+.cta-button:hover, .cta-button:active { opacity: 0.9; }
 
-.cta-button:hover,
-.cta-button:active {
-  opacity: 0.9;
-}
-
-/* Hero description box */
+/* Description box */
 .description-box {
-  width: 637px;
-  min-height: 114px;
-  height: auto;        /* auto expand */
-  margin: 90px auto 0;
-  background-color: transparent;
-  overflow: visible;   /* no clipping */
-  padding: 10px;
-  border-radius: 8px;
-  box-sizing: border-box;
+  width: 637px; min-height: 114px; height: auto;
+  margin: 90px auto 0; background: transparent; overflow: visible;
+  padding: 10px; border-radius: 8px; box-sizing: border-box;
 }
-
-.main-description {
-  font-size: 16px;
-  font-weight: 300;
-  text-align: center;
-  line-height: 1.6;
-  margin: 0;
-}
+.main-description { font-size: 16px; font-weight: 300; line-height: 1.6; margin: 0; }
 
 /* Info Section */
 .info-full {
-  width: 100vw;
-  background-color: #fff;
-  color: #000;
-  display: flex;
-  justify-content: center;
-  padding: 100px 20px;
-  box-sizing: border-box;
+  width: 100vw; background-color: #fff; color: #000;
+  display: flex; justify-content: center; padding: 100px 20px; box-sizing: border-box;
 }
-
-.info-inner {
-  max-width: 1200px;
-  width: 100%;
-  text-align: center;
-}
-
+.info-inner { max-width: 1200px; width: 100%; text-align: center; }
 .info-box {
   background-color: rgba(255, 255, 255, 0.2);
-  padding: 20px;
-  border-radius: 8px;
-  max-width: 800px;
-  margin: 0 auto 60px;
+  padding: 20px; border-radius: 8px; max-width: 800px; margin: 0 auto 60px;
 }
-
-.info-text {
-  font-size: 14px;
-  line-height: 1.6;
-  margin: 0;
-}
-
+.info-text { font-size: 14px; line-height: 1.6; margin: 0; }
 .info-icons {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  gap: 80px;
-  flex-wrap: wrap;
-  margin-top: 40px;
+  display: flex; justify-content: center; align-items: flex-end; gap: 80px; flex-wrap: wrap; margin-top: 40px;
 }
-
 .icon-item {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-  width: 150px;
-  height: 220px;
-  text-align: center;
+  display: flex; flex-direction: column; justify-content: flex-end; align-items: center;
+  width: 150px; height: 220px; text-align: center;
 }
+.icon-item img { width: 80px; margin-bottom: 12px; transition: transform 0.3s ease; }
+.icon-item img:hover { transform: scale(1.1); }
+.icon-item p { font-size: 14px; margin: 0; line-height: 1.4; }
 
-.icon-item img {
-  width: 80px;
-  margin-bottom: 12px;
-  transition: transform 0.3s ease;
-}
-
-.icon-item img:hover {
-  transform: scale(1.1);
-}
-
-.icon-item p {
-  font-size: 14px;
-  margin: 0;
-  line-height: 1.4;
-}
-
-/* 2: Pentagon Section (headphones_hero_2) */
+/* 2: Headphones hero 2 */
 .hero-full {
-  width: 100vw;
-  height: 650px; /* fixed height */
-  background: url("images/headphones_hero_2.jpg") no-repeat center center;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  padding-top: 100px;
-  box-sizing: border-box;
+  width: 100vw; height: 650px; background: url("images/headphones_hero_2.jpg") no-repeat center center;
+  background-size: cover; display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
+  padding-top: 100px; box-sizing: border-box;
 }
-
-.hero-2-box {
-  width: 637px;
-  min-height: 104px;
-  text-align: center;
-  margin-bottom: 60px;
-}
-
-.hero-2-box p {
-  font-size: 16px;
-  font-weight: 400;
-  color: #fff;
-  line-height: 1.4;
-}
-
-.pentagon-grid {
-  display: flex;
-  gap: 60px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
+.hero-2-box { width: 637px; min-height: 104px; text-align: center; margin-bottom: 60px; }
+.hero-2-box p { font-size: 16px; font-weight: 400; color: #fff; line-height: 1.4; }
+.pentagon-grid { display: flex; gap: 60px; flex-wrap: wrap; justify-content: center; }
 .pentagon {
-  width: 190px;
-  height: 190px;
-  background: url("images/pentagone.png") no-repeat center center;
-  background-size: contain;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  width: 190px; height: 190px; background: url("images/pentagone.png") no-repeat center center / contain;
+  display: flex; flex-direction: column; justify-content: center; align-items: center;
 }
+.pentagon-value { font-size: 46px; font-weight: 700; color: #fff; margin: 0 0 12px; }
+.pentagon-label { font-size: 14px; color: #fff; margin: 0; }
 
-.pentagon-value {
-  font-size: 46px;
-  font-weight: 700;
-  color: #fff;
-  margin: 0 0 12px 0;
-}
-
-.pentagon-label {
-  font-size: 14px;
-  color: #fff;
-  margin: 0;
-}
-
-/* 3: Line Section (white background) */
+/* 3: Line Section (white) */
 .line-section {
-  width: 100vw;
-  height: 613px; /* fixed height */
-  background-color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 100vw; height: 613px; background-color: #fff;
+  display: flex; justify-content: center; align-items: center;
 }
+.line-box { display: flex; flex-direction: column; align-items: center; }
+.line { width: 335px; height: 1px; background-color: rgba(7, 22, 41, 0.175); margin: 30px 0; }
 
-.line-box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.line {
-  width: 335px;
-  height: 1px;
-  background-color: rgba(7, 22, 41, 0.175);
-  margin: 30px 0; /* spacing between lines */
-}
-
-/* 4: Footer Section (#071629) */
+/* 4: Footer (#071629) */
 .social-page {
-  width: 100vw;
-  height: 249px; /* fixed height */
-  background-color: #071629;
-  display: flex;
-  flex-direction: column;   /* stack top row and bottom text */
-  justify-content: center;
-  align-items: stretch;
-  padding: 0 80px;
-  box-sizing: border-box;
+  width: 100vw; height: 249px; background-color: #071629;
+  display: flex; flex-direction: column; justify-content: center; align-items: stretch;
+  padding: 0 80px; box-sizing: border-box;
 }
-
 .social-top {
-  display: flex;
-  justify-content: space-between; /* logo left, icons right */
-  align-items: center;            /* same line */
-  height: 180px;                  /* space for row inside 249px bar */
+  display: flex; justify-content: space-between; align-items: center;
+  height: 170px;
 }
-
-.social-left img {
-  height: 40px;
-}
-
-.social-right {
-  display: flex;
-  gap: 20px;
-}
-
-.icon {
-  width: 30px;
-  height: 30px;
-}
-
+.social-left img { height: 40px; }
+.social-right { display: flex; gap: 20px; }
+.icon { width: 30px; height: 30px; }
 .social-bottom {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 69px; /* 249 - 180 = 69, keeps © centered below */
-  text-align: center;
+  display: flex; justify-content: center; align-items: center; height: 79px; text-align: center;
 }
-
-.social-bottom p {
-  color: rgba(255, 255, 255, 0.35);
-  font-size: 14px;
-  margin: 0;
-}
+.social-bottom p { color: rgba(255, 255, 255, 0.35); font-size: 14px; margin: 0; }
 
 /* ------------------------- */
-/* Responsive fixes (mobile) */
+/* Responsive (tablet/phone) */
 /* ------------------------- */
 
-/* Tablet adjustments */
 @media screen and (max-width: 1024px) {
-  .logo {
-    left: 40px;
-  }
-
-  .nav {
-    right: 40px;
-  }
-
-  .description-box {
-    width: 90%;
-    margin: 60px auto 0;
-  }
-
-  .hero-2-box {
-    width: 90%;
-  }
+  .logo { position: static; }
+  .header { position: relative; padding: 20px 0; }
+  .nav { position: static; right: auto; gap: 16px; }
+  .description-box { width: 90%; margin: 60px auto 0; }
+  .hero-2-box { width: 90%; }
 }
 
-/* Phone adjustments */
 @media screen and (max-width: 768px) {
-  /* Header: simplify and ensure navigation works without JS */
-  .header {
-    position: relative;
-    padding: 20px 0;
-  }
-
-  .logo {
-    position: static;
-  }
-
-  .hamburger {
-    display: none; /* disable hamburger since dropdown is always visible */
-  }
-
+  /* Header: remove absolute layout to prevent overlap */
+  .header { position: relative; padding: 16px 0; }
+  .logo { position: static; }
   .nav {
-    position: static;
-    width: 100%;
-    justify-content: center;
-    gap: 16px;
-    padding: 12px 0;
-    background: rgba(7, 22, 41, 0.4); /* subtle bar to separate */
-    backdrop-filter: blur(2px);
+    position: static; display: flex; flex-wrap: wrap; justify-content: center;
+    gap: 12px; width: 100%; padding: 10px 0; background: rgba(7, 22, 41, 0.45);
   }
+  .nav a { padding: 6px 8px; font-size: 13px; }
 
-  .nav a {
-    padding: 6px 8px;
-    font-weight: 700;
-  }
+  /* Hero spacing */
+  .main { padding-top: 180px; width: 92%; }
+  .main h1 { font-size: 24px; }
+  .subheading { font-size: 14px; }
+  .description-box { width: 92%; margin: 30px auto 0; padding: 8px; }
+  .main-description { font-size: 14px; line-height: 1.5; }
+  .cta-button { width: 85%; max-width: 320px; height: 42px; font-size: 13px; margin-top: 28px; }
 
-  /* Hero spacing and text scaling */
-  .main {
-    padding-top: 180px;
-    width: 92%;
-  }
+  /* Info section */
+  .info-full { padding: 60px 16px; }
+  .info-icons { flex-direction: column; gap: 22px; }
+  .icon-item { width: 100%; height: auto; }
 
-  .main h1 {
-    font-size: 24px;
-  }
+  /* Hero 2: keep 650px, reduce internal gaps */
+  .hero-full { height: 650px; padding-top: 60px; }
+  .hero-2-box { width: 92%; margin-bottom: 30px; }
+  .pentagon-grid { gap: 28px; }
+  .pentagon { width: 150px; height: 150px; }
+  .pentagon-value { font-size: 36px; }
 
-  .subheading {
-    font-size: 14px;
-  }
+  /* Line section: keep height */
+  .line-section { height: 613px; padding: 0 16px; }
+  .line { width: 82%; max-width: 335px; margin: 18px 0; }
 
-  .description-box {
-    width: 92%;
-    margin: 30px auto 0;
-    padding: 8px;
-  }
-
-  .main-description {
-    font-size: 14px;
-    line-height: 1.5;
-  }
-
-  .cta-button {
-    width: 85%;
-    max-width: 320px;
-    height: 42px;
-    font-size: 13px;
-    margin-top: 28px;
-  }
-
-  /* Info icons stack */
-  .info-full {
-    padding: 60px 16px;
-  }
-
-  .info-icons {
-    flex-direction: column;
-    gap: 22px;
-  }
-
-  .icon-item {
-    width: 100%;
-    height: auto;
-  }
-
-  /* Pentagon section: reduce internal spacing, keep 650px height */
-  .hero-full {
-    height: 650px;
-    padding-top: 60px;
-  }
-
-  .pentagon-grid {
-    gap: 28px;
-  }
-
-  .pentagon {
-    width: 150px;
-    height: 150px;
-  }
-
-  .pentagon-value {
-    font-size: 36px;
-  }
-
-  /* Line section: keep height, tighten spacing */
-  .line-section {
-    height: 613px;
-    padding: 0 16px;
-  }
-
-  .line {
-    width: 80%;
-    max-width: 335px;
-    margin: 18px 0;
-  }
-
-  /* Footer bar: keep 249px, align content cleanly */
-  .social-page {
-    height: 249px;
-    padding: 0 16px;
-  }
-
-  .social-top {
-    height: 170px;
-  }
-
-  .social-left img {
-    height: 34px;
-  }
-
-  .social-right {
-    gap: 16px;
-  }
-
-  .icon {
-    width: 26px;
-    height: 26px;
-  }
-
-  .social-bottom {
-    height: 79px; /* adjust for mobile balance */
-  }
+  /* Footer: keep 249px, align horizontally on top row */
+  .social-page { height: 249px; padding: 0 16px; }
+  .social-top { height: 160px; }
+  .social-left img { height: 34px; }
+  .social-right { gap: 16px; }
+  .icon { width: 26px; height: 26px; }
+  .social-bottom { height: 89px; }
 }
