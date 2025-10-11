@@ -7,11 +7,14 @@ body {
   color: #fff;
 }
 
-/* Container */
+/* Container (hero) */
 .container {
   max-width: 1000px;
   margin: 0 auto;
   padding: 20px;
+  box-sizing: border-box;
+  position: relative;
+  height: 800px; /* fixed height for desktop */
 }
 
 /* Header (desktop) */
@@ -35,38 +38,59 @@ body {
   gap: 20px;
 }
 .nav a {
-  color: #fff; text-decoration: none; font-weight: 700;
-  padding: 8px 12px; transition: color 0.3s ease;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 8px 12px;
+  transition: color 0.3s ease;
 }
 .nav a:hover, .nav a:active { color: #FF6565; }
 .hamburger { display: none; }
 
-/* Always hide the checkbox */
-#menu-toggle {
-  display: none;
-}
+/* Hide the checkbox always (prevents visible input on desktop) */
+#menu-toggle { display: none; }
 
-/* Main hero */
+/* Main hero content */
 .main {
-  display: flex; flex-direction: column; align-items: center; text-align: center;
-  width: 90%; max-width: 800px; margin: 0 auto; padding-top: 380px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding-top: 200px; /* initial spacing so content sits nicely within 800px hero */
 }
 .main h1 { font-size: 32px; font-weight: 700; margin-bottom: 20px; }
 .subheading { font-size: 16px; font-weight: 700; margin: 0; }
 
 /* Button */
 .cta-button {
-  background-color: #FF6565; color: #fff; border: none; border-radius: 32px;
-  width: 162px; height: 44px; font-size: 14px; font-weight: 700;
-  cursor: pointer; margin-top: 60px; transition: opacity 0.3s ease;
+  background-color: #FF6565;
+  color: #fff;
+  border: none;
+  border-radius: 32px;
+  width: 162px;
+  height: 44px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 60px;
+  transition: opacity 0.3s ease;
 }
 .cta-button:hover, .cta-button:active { opacity: 0.9; }
 
 /* Description box */
 .description-box {
-  width: 637px; min-height: 114px; height: auto;
-  margin: 90px auto 0; background: transparent; overflow: visible;
-  padding: 10px; border-radius: 8px; box-sizing: border-box;
+  width: 637px;
+  min-height: 114px;
+  height: auto;
+  margin: 90px auto 0;
+  background: transparent;
+  overflow: visible;
+  padding: 10px;
+  border-radius: 8px;
+  box-sizing: border-box;
 }
 .main-description { font-size: 16px; font-weight: 300; line-height: 1.6; margin: 0; }
 
@@ -85,15 +109,28 @@ body {
 .info-inner { max-width: 1200px; width: 100%; text-align: center; }
 .info-box {
   background-color: rgba(255, 255, 255, 0.2);
-  padding: 20px; border-radius: 8px; max-width: 800px; margin: 0 auto 60px;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 800px;
+  margin: 0 auto 60px;
 }
 .info-text { font-size: 14px; line-height: 1.6; margin: 0; }
 .info-icons {
-  display: flex; justify-content: center; align-items: flex-end; gap: 80px; flex-wrap: wrap; margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 80px;
+  flex-wrap: wrap;
+  margin-top: 40px;
 }
 .icon-item {
-  display: flex; flex-direction: column; justify-content: flex-end; align-items: center;
-  width: 150px; height: 220px; text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  width: 150px;
+  height: 220px;
+  text-align: center;
 }
 .icon-item img { width: 80px; margin-bottom: 12px; transition: transform 0.3s ease; }
 .icon-item img:hover { transform: scale(1.1); }
@@ -104,7 +141,10 @@ body {
   width: 100%;
   background: url("images/headphones_hero_2.jpg") no-repeat center center;
   background-size: cover;
-  display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
   padding: 100px 20px;
   box-sizing: border-box;
   min-height: 650px;
@@ -114,8 +154,13 @@ body {
 .hero-2-box p { font-size: 16px; font-weight: 400; color: #fff; line-height: 1.4; }
 .pentagon-grid { display: flex; gap: 60px; flex-wrap: wrap; justify-content: center; }
 .pentagon {
-  width: 190px; height: 190px; background: url("images/pentagone.png") no-repeat center center / contain;
-  display: flex; flex-direction: column; justify-content: center; align-items: center;
+  width: 190px;
+  height: 190px;
+  background: url("images/pentagone.png") no-repeat center center / contain;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .pentagon-value { font-size: 46px; font-weight: 700; color: #fff; margin: 0 0 12px; }
 .pentagon-label { font-size: 14px; color: #fff; margin: 0; }
@@ -124,7 +169,9 @@ body {
 .line-section {
   width: 100%;
   background-color: #fff;
-  display: flex; justify-content: center; align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 60px 20px;
   box-sizing: border-box;
   min-height: 400px;
@@ -137,21 +184,30 @@ body {
 .social-page {
   width: 100%;
   background-color: #071629;
-  display: flex; flex-direction: column; justify-content: center; align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
   padding: 40px 20px;
   box-sizing: border-box;
   min-height: 249px;
   height: auto;
 }
 .social-top {
-  display: flex; justify-content: space-between; align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   height: 170px;
 }
 .social-left img { height: 40px; }
 .social-right { display: flex; gap: 20px; }
 .icon { width: 30px; height: 30px; }
 .social-bottom {
-  display: flex; justify-content: center; align-items: center; height: 79px; text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 79px;
+  text-align: center;
 }
 .social-bottom p { color: rgba(255, 255, 255, 0.35); font-size: 14px; margin: 0; }
 
@@ -167,7 +223,11 @@ body {
   .hero-2-box { width: 90%; }
 }
 
+/* Mobile rules */
 @media screen and (max-width: 768px) {
+  /* container fixed height for phone */
+  .container { height: 869px; }
+
   /* Header: logo centered, hamburger left */
   .header {
     position: relative;
@@ -179,7 +239,7 @@ body {
   .logo {
     position: static;
     margin: 0 auto;
-    margin-left: 48px; /* add space so it doesn't collide with hamburger */
+    margin-left: 64px; /* increased space so it doesn't collide with hamburger */
   }
   .hamburger {
     display: block;
@@ -205,10 +265,29 @@ body {
     gap: 16px;
     background-color: transparent !important;
   }
-  #menu-toggle:checked + .hamburger + .nav {
-    display: flex;
-  }
+  #menu-toggle:checked + .hamburger + .nav { display: flex; }
 
-  /* Hero spacing */
-  .main { padding-top: 180px; width: 92%; }
-  .main h1 { font-size: 24px
+  /* Adjust hero content spacing for phone */
+  .main { padding-top: 160px; width: 92%; }
+  .main h1 { font-size: 24px; }
+  .subheading { font-size: 14px; }
+
+  /* Tweak description and CTA sizing for phone */
+  .description-box { width: 92%; margin: 30px auto 0; padding: 8px; }
+  .main-description { font-size: 14px; line-height: 1.5; }
+  .cta-button { width: 85%; max-width: 320px; height: 42px; font-size: 13px; margin-top: 28px; }
+
+  /* Info section spacing for phone */
+  .info-full { padding: 60px 16px; min-height: 0; }
+  .info-icons { gap: 28px; }
+  .icon-item { width: 120px; height: auto; }
+
+  /* Hero 2 and other sections adjustments */
+  .hero-full { padding: 80px 16px; min-height: 0; }
+  .pentagon { width: 150px; height: 150px; }
+  .pentagon-value { font-size: 36px; }
+
+  .line-section { padding: 40px 16px; min-height: 0; }
+  .social-top { flex-direction: column; gap: 20px; height: auto; padding-bottom: 20px; }
+  .social-bottom { height: auto; padding: 16px 0; }
+}
