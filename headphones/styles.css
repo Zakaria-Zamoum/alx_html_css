@@ -53,10 +53,14 @@ body {
 }
 
 /* Hide the checkbox always */
+#menu-toggle:checked + .hamburger + .nav {
+  display: flex;
+  background-color: transparent; /* fully transparent */
+}
+/* Always hide the checkbox */
 #menu-toggle {
   display: none;
 }
-
 /* Main hero content */
 .main {
   display: flex;
@@ -313,8 +317,9 @@ body {
   }
 
   .logo-header {
-    margin: 0 auto;
+    margin-left: 60px;
   }
+
 
   .hamburger {
     display: block;
