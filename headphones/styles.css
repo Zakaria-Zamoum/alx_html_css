@@ -1,6 +1,6 @@
-/* Full CSS — .container constrained, all other sections full-width */
-
-/* Base styles */
+html, body {
+overflow-x:hidden;
+}
 body {
   margin: 0;
   font-family: 'Source Sans Pro', sans-serif;
