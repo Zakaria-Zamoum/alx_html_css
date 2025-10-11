@@ -392,11 +392,10 @@ text-align:center;
     font-size: 14px;
   }
 
-  .info-full {
-    padding: 60px 16px;
-height:1638;
-  }
-
+.info-full {
+  padding: 60px 16px;
+  min-height: 100vh;
+}
   .info-icons {
     gap: 28px;
   }
