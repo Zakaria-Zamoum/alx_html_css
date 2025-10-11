@@ -1,0 +1,101 @@
+/* White section */
+.info-full {
+  width: 100vw;
+  background-color: #fff;
+  color: #000;
+  display: flex;
+  justify-content: center;
+  padding: 100px 20px;
+  box-sizing: border-box;
+}
+
+.info-inner {
+  max-width: 1200px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Transparent box with top paragraph */
+.info-box {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 800px;
+  margin: 0 auto 60px;
+  box-sizing: border-box;
+}
+
+.info-text {
+  font-size: 14px;
+  color: #000;
+  line-height: 1.6;
+  margin: 0;
+  text-align: center;
+}
+
+/* Icon row */
+.info-icons {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end; /* Align all items to bottom */
+  gap: 80px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+/* Each icon + caption */
+.icon-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Align content to bottom */
+  align-items: center;
+  width: 150px;
+  height: 220px; /* Force equal height */
+  text-align: center;
+}
+
+.icon-item img {
+  width: 80px;
+  height: auto;
+  margin-bottom: 12px;
+  transition: transform 0.3s ease;
+}
+
+.icon-item img:hover {
+  transform: scale(1.1);
+}
+
+.icon-item p {
+  font-size: 14px;
+  font-weight: 400;
+  color: #000;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .info-icons {
+    gap: 40px;
+  }
+
+  .info-text {
+    font-size: 13px;
+  }
+
+  .icon-item {
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .info-icons {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .icon-item {
+    width: 100%;
+    height: auto;
+  }
+}
