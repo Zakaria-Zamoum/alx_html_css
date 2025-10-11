@@ -237,10 +237,18 @@ body {
     padding: 16px 0;
   }
   .logo {
-    position: static;
-    margin: 0 auto;
-    margin-left: 70px; /* increased space so it doesn't collide with hamburger */
-  }
+  position: static;
+  margin: 0 auto;
+}
+
+.header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 0;
+  padding-left: 60px; /* creates space between hamburger and logo */
+}
   .hamburger {
     display: block;
     position: absolute;
