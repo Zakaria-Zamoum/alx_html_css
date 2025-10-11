@@ -61,7 +61,6 @@ body {
   color: #FF6565;
 }
 
-/* Hamburger (desktop hidden, mobile shown) */
 .hamburger {
   display: none;
   font-size: 28px;
@@ -70,7 +69,6 @@ body {
   top: 30px;
   left: 20px;
   z-index: 1000;
-  color: #fff;
 }
 
 /* Main hero */
@@ -222,7 +220,7 @@ body {
   width: 637px;
   min-height: 104px;
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 80px;
 }
 
 .hero-2-box p {
@@ -283,18 +281,19 @@ body {
   width: 335px;
   height: 1px;
   background-color: rgba(7, 22, 41, 0.175);
-  margin: 30px 0; /* spacing between lines */
+  margin: 30px 0;
 }
 
 /* 4: Footer Section (#071629) */
+/* 4: Footer Section (#071629) */
+/* Footer Section */
 .social-page {
   width: 100vw;
-  height: 249px; /* fixed height */
+  height: 249px;
   background-color: #071629;
   display: flex;
-  flex-direction: column;   /* stack top row and bottom text */
-  justify-content: center;
-  align-items: stretch;
+  flex-direction: column;   /* stack top and bottom */
+  justify-content: space-between;
   padding: 0 80px;
   box-sizing: border-box;
 }
@@ -302,8 +301,8 @@ body {
 .social-top {
   display: flex;
   justify-content: space-between; /* logo left, icons right */
-  align-items: center;            /* same line */
-  height: 180px;                  /* space for row inside 249px bar */
+  align-items: center;
+  flex: 1; /* take available space */
 }
 
 .social-left img {
@@ -321,177 +320,12 @@ body {
 }
 
 .social-bottom {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 69px; /* 249 - 180 = 69, keeps © centered below */
   text-align: center;
+  padding-bottom: 10px;
 }
 
 .social-bottom p {
   color: rgba(255, 255, 255, 0.35);
   font-size: 14px;
   margin: 0;
-}
-
-/* ------------------------- */
-/* Responsive fixes (mobile) */
-/* ------------------------- */
-
-/* Tablet adjustments */
-@media screen and (max-width: 1024px) {
-  .logo {
-    left: 40px;
-  }
-
-  .nav {
-    right: 40px;
-  }
-
-  .description-box {
-    width: 90%;
-    margin: 60px auto 0;
-  }
-
-  .hero-2-box {
-    width: 90%;
-  }
-}
-
-/* Phone adjustments */
-@media screen and (max-width: 768px) {
-  /* Header: simplify and ensure navigation works without JS */
-  .header {
-    position: relative;
-    padding: 20px 0;
-  }
-
-  .logo {
-    position: static;
-  }
-
-  .hamburger {
-    display: none; /* disable hamburger since dropdown is always visible */
-  }
-
-  .nav {
-    position: static;
-    width: 100%;
-    justify-content: center;
-    gap: 16px;
-    padding: 12px 0;
-    background: rgba(7, 22, 41, 0.4); /* subtle bar to separate */
-    backdrop-filter: blur(2px);
-  }
-
-  .nav a {
-    padding: 6px 8px;
-    font-weight: 700;
-  }
-
-  /* Hero spacing and text scaling */
-  .main {
-    padding-top: 180px;
-    width: 92%;
-  }
-
-  .main h1 {
-    font-size: 24px;
-  }
-
-  .subheading {
-    font-size: 14px;
-  }
-
-  .description-box {
-    width: 92%;
-    margin: 30px auto 0;
-    padding: 8px;
-  }
-
-  .main-description {
-    font-size: 14px;
-    line-height: 1.5;
-  }
-
-  .cta-button {
-    width: 85%;
-    max-width: 320px;
-    height: 42px;
-    font-size: 13px;
-    margin-top: 28px;
-  }
-
-  /* Info icons stack */
-  .info-full {
-    padding: 60px 16px;
-  }
-
-  .info-icons {
-    flex-direction: column;
-    gap: 22px;
-  }
-
-  .icon-item {
-    width: 100%;
-    height: auto;
-  }
-
-  /* Pentagon section: reduce internal spacing, keep 650px height */
-  .hero-full {
-    height: 650px;
-    padding-top: 60px;
-  }
-
-  .pentagon-grid {
-    gap: 28px;
-  }
-
-  .pentagon {
-    width: 150px;
-    height: 150px;
-  }
-
-  .pentagon-value {
-    font-size: 36px;
-  }
-
-  /* Line section: keep height, tighten spacing */
-  .line-section {
-    height: 613px;
-    padding: 0 16px;
-  }
-
-  .line {
-    width: 80%;
-    max-width: 335px;
-    margin: 18px 0;
-  }
-
-  /* Footer bar: keep 249px, align content cleanly */
-  .social-page {
-    height: 249px;
-    padding: 0 16px;
-  }
-
-  .social-top {
-    height: 170px;
-  }
-
-  .social-left img {
-    height: 34px;
-  }
-
-  .social-right {
-    gap: 16px;
-  }
-
-  .icon {
-    width: 26px;
-    height: 26px;
-  }
-
-  .social-bottom {
-    height: 79px; /* adjust for mobile balance */
-  }
 }
