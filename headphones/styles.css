@@ -22,7 +22,7 @@ body {
   justify-content: space-between;
   align-items: center;
   margin-left: -170px;   /* pushes logo further left */
-  margin-right: -150px;  /* pushes nav further right */
+  margin-right: -0px;  /* pushes nav further right */
 }
 .logo-header {
   position: static;
