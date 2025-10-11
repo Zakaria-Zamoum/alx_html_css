@@ -1,0 +1,263 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  background-color: #ffffff;
+  color: #333;
+}
+
+/* Page wrapper */
+.page {
+  max-width: 1440px;
+  margin: 0 auto;
+  position: relative;
+  overflow: visible;
+}
+
+/* Header styles */
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 50px;
+  z-index: 10;
+  background-color: transparent;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.logo img {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #C271FF;
+}
+
+/* Banner section */
+.banner {
+  position: relative;
+  background: url('Object.png') top center / cover no-repeat;
+  min-height: 1250px;
+  height: auto;
+  color: #fff;
+  margin: 0;
+  padding-bottom: 300px;
+}
+
+.banner .overlay {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* Banner texts */
+.banner .get-schooled {
+  position: absolute;
+  left: 377px;
+  top: 220px;
+  font-size: 120px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.banner .smile,
+.banner .grin,
+.banner .laugh {
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.banner .smile { position: absolute; left: 593px; top: 361px; }
+.banner .grin { position: absolute; left: 704px; top: 361px; }
+.banner .laugh { position: absolute; left: 797px; top: 361px; }
+
+.banner .learn-pros {
+  position: absolute;
+  left: 604px;
+  top: 631px;
+  font-size: 32px;
+  font-weight: 300;
+}
+
+.banner .learn-pros .learn-word {
+  font-weight: 700;
+  color: #C271FF;
+}
+
+.banner .learn-pros .from-pros {
+  font-weight: 300;
+  color: #fff;
+}
+
+/* Register button */
+button.register {
+  position: absolute;
+  left: 639px;
+  top: 419px;
+  width: 162px;
+  height: 44px;
+  background-color: #C271FF;
+  color: white;
+  border: none;
+  border-radius: 22px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button.register:hover {
+  background-color: #a84de6;
+}
+
+/* Image row */
+.image-row {
+  position: absolute;
+  left: 217px;
+  top: 727px;
+  width: 1009px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.image-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 150px;
+}
+
+.image-item img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.image-item img.rounded {
+  border-radius: 50%;
+}
+
+/* Names below images */
+.image-name {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+  font-weight: 900;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Description below names - 2 lines max */
+.image-desc {
+  margin-top: 8px;
+  font-size: 16px;
+  font-style: italic;
+  color: #fff;
+  text-align: center;
+  line-height: 1.2;
+  height: 40px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  word-wrap: break-word;
+}
+
+/* Third description smaller */
+.image-item:nth-child(3) .image-desc {
+  font-size: 14px;
+}
+
+/* Testimonial Section - image and text separated by 53px */
+.testimonial-section {
+  width: 1440px;
+  height: 392px;
+  background-color: #C271FF;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-left: 259px; /* image starts here */
+}
+
+.testimonial-img {
+  width: 160px;
+  height: 160px;
+}
+
+.testimonial-container {
+  margin-left: 53px; /* space between image and text */
+  max-width: 730px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.testimonial-text {
+  font-size: 22px;
+  font-style: italic;
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+
+.testimonial-name {
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 15px;
+  margin-bottom: 2px;
+}
+
+.testimonial-job {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .page { width: 100%; height: auto; }
+  header { position: static; padding: 20px; width: 100%; }
+  .logo img { height: 30px; width: auto; }
+  nav ul { flex-direction: column; gap: 10px; }
+  .banner { height: auto; padding: 40px 20px; background-size: cover; }
+  .banner .get-schooled,
+  .banner .smile,
+  .banner .grin,
+  .banner .laugh,
+  .banner .learn-pros { position: static; text-align: center; margin-bottom: 10px; }
+  .image-row { position: static; flex-wrap: wrap; justify-content: center; gap: 20px; }
+  button.register { position: static; margin: 10px auto; }
+  .testimonial-section { padding-left: 20px; flex-direction: column; align-items: flex-start; }
+  .testimonial-img { margin-bottom: 20px; }
+}

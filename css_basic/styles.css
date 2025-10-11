@@ -1,0 +1,57 @@
+/* Flexbox layout already handled in previous task */
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fdfdfd;
+  color: #333;
+}
+
+header {
+  background-color: #004466;
+  color: white;
+  padding: 20px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.logo {
+  font-size: 2rem;
+  margin-right: auto;
+}
+
+main {
+  background-color: #ffffff;
+  border-top: 2px solid #ccc;
+  border-bottom: 2px solid #ccc;
+}
+
+article {
+  background-color: #f0f8ff;
+  padding: 20px;
+  border-right: 1px solid #ccc;
+}
+
+aside {
+  background-color: #fff8dc;
+  padding: 20px;
+  border-left: 1px solid #ccc;
+}
+
+footer {
+  background-color: #004466;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
