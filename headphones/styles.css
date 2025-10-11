@@ -1,3 +1,5 @@
+/* Full CSS — .container constrained, all other sections full-width */
+
 /* Base styles */
 body {
   margin: 0;
@@ -6,10 +8,14 @@ body {
   background-color: #000; /* fallback */
 }
 
-/* Container (hero) */
+/* Container (hero) - constrained width, controlled height and background */
 .container {
- position: relative;
-  height: 800px; /* desktop height */
+  width: 100%;            /* responsive inside that max-width */
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+  position: relative;
+  height: 800px;          /* desktop height */
   background: url("images/headphones_hero_1.jpg") no-repeat center center;
   background-size: cover;
 }
@@ -19,8 +25,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-left: 70px;   /* pushes logo further left */
-  margin-right: 50px;  /* pushes nav further right */
+  margin-left: 70px;
+  margin-right: 50px;
 }
 .logo-header img {
   height: 50px;
@@ -52,16 +58,18 @@ body {
   color: #fff;
 }
 
-/* Hide the checkbox always */
-#menu-toggle:checked + .hamburger + .nav {
-  display: flex;
-  background-color: transparent; /* fully transparent */
-}
-/* Always hide the checkbox */
+/* Always hide the checkbox input that powers the hamburger */
 #menu-toggle {
   display: none;
 }
-/* Main hero content */
+
+/* When checked, show mobile nav; make its background transparent */
+#menu-toggle:checked + .hamburger + .nav {
+  display: flex;
+  background-color: transparent;
+}
+
+/* Main hero content (sits inside constrained .container) */
 .main {
   display: flex;
   flex-direction: column;
@@ -119,9 +127,14 @@ body {
   margin: 0;
 }
 
-/* Info Section */
+/* -------------------------
+   Sections that must be full-width
+   (kept width: 100% / stretch across viewport)
+   ------------------------- */
+
+/* Info Section - FULL WIDTH */
 .info-full {
-  width: 100%;
+  width: 100%;            /* full viewport width */
   background-color: #fff;
   color: #000;
   display: flex;
@@ -130,6 +143,8 @@ body {
   box-sizing: border-box;
   min-height: 600px;
 }
+
+/* inner wrapper can limit content inside full-width section */
 .info-inner {
   max-width: 1200px;
   width: 100%;
@@ -177,9 +192,9 @@ body {
   line-height: 1.4;
 }
 
-/* Hero 2 Section */
+/* Hero 2 Section - FULL WIDTH */
 .hero-full {
-  width: 100%;
+  width: 100%;           
   background: url("images/headphones_hero_2.jpg") no-repeat center center;
   background-size: cover;
   display: flex;
@@ -227,9 +242,9 @@ body {
   margin: 0;
 }
 
-/* Line Section */
+/* Line Section - FULL WIDTH */
 .line-section {
-  width: 100%;
+  width: 100%;            /* full viewport width */
   background-color: #fff;
   display: flex;
   justify-content: center;
@@ -250,9 +265,9 @@ body {
   margin: 30px 0;
 }
 
-/* Footer Section */
+/* Footer Section - FULL WIDTH */
 .social-page {
-  width: 100%;
+  width: 100%;            /* full viewport width */
   background-color: #071629;
   display: flex;
   flex-direction: column;
@@ -292,9 +307,9 @@ body {
   margin: 0;
 }
 
-/* ------------------------- */
-/* Responsive (tablet/phone) */
-/* ------------------------- */
+/* -------------------------
+   Responsive (tablet/phone)
+   ------------------------- */
 
 @media screen and (max-width: 1024px) {
   .description-box,
@@ -304,22 +319,26 @@ body {
 }
 
 @media screen and (max-width: 768px) {
+  /* keep hero height fixed on mobile */
   .container {
-    height: 869px; /* fixed height for phone */
+    height: 869px;
   }
 
+  /* reset header margins on mobile so hamburger / logo don't collide */
   .header {
     justify-content: center;
     align-items: center;
     padding: 16px 0;
     padding-left: 60px; /* space for hamburger */
     position: relative;
+    margin-left: 0;
+    margin-right: 0;
   }
 
+  /* push logo slightly right to clear hamburger */
   .logo-header {
     margin-left: 60px;
   }
-
 
   .hamburger {
     display: block;
@@ -338,18 +357,30 @@ body {
     right: 0;
     padding: 20px 0;
     gap: 16px;
-    background-color: rgba(0,0,0,0.35);
+    background-color: rgba(0, 0, 0, 0.35); /* default nav background on mobile */
     z-index: 1000;
   }
 
-  /* show mobile nav when checkbox is checked */
+  /* when checkbox is checked, show nav with transparent bg */
   #menu-toggle:checked + .hamburger + .nav {
     display: flex;
+    background-color: transparent;
   }
+
   .description-box {
     width: 92%;
     margin: 30px auto 0;
     padding: 8px;
+    background: transparent;
+    border-radius: 8px;
+    box-sizing: border-box;
+  }
+
+  .main-description {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.6;
+    margin: 0;
   }
 
   .main h1 {
@@ -403,12 +434,10 @@ body {
   }
 
   .social-right {
-    gap: 12px;
-  }
-
-  .social-bottom {
-    height: auto;
-    padding: 16px 0;
-  }
+gap: 12	px;
 }
- 
+.social-button {
+height: auto;
+padding: 16px 0;
+}
+  
