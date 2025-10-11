@@ -1,0 +1,77 @@
+body {
+  margin: 0;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.hero-full {
+  width: 100vw;
+  min-height: 100vh;
+  background: url("images/headphones_hero_2.jpg") no-repeat center center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;     
+  padding-top: 340px;
+  box-sizing: border-box;
+}
+
+/* Top paragraph box */
+.hero-2-box {
+  width: 637px;
+  height: 104px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.hero-2-box p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+  margin: 0;
+  line-height: 1.4;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+/* Pentagon grid */
+.pentagon-grid {
+  display: flex;
+  gap: 60px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.pentagon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pentagon {
+  width: 190px;
+  height: 190px;
+  background: url("images/pentagone.png") no-repeat center center;
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.pentagon-value {
+  font-size: 46px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 12px 0;
+}
+
+.pentagon-label {
+  font-size: 14px;
+  font-weight: 400;
+  color: #fff;
+  margin: 0;
+}
