@@ -142,14 +142,48 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-  /* Header: remove absolute layout to prevent overlap */
-  .header { position: relative; padding: 16px 0; }
-  .logo { position: static; }
-  .nav {
-    position: static; display: flex; flex-wrap: wrap; justify-content: center;
-    gap: 12px; width: 100%; padding: 10px 0; background: rgba(7, 22, 41, 0.45);
+  /* Header: logo centered, hamburger left */
+  .header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 0;
   }
-  .nav a { padding: 6px 8px; font-size: 13px; }
+  .logo {
+    position: static;
+    margin: 0 auto;
+  }
+  .hamburger {
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 28px;
+    cursor: pointer;
+    color: #fff;
+    z-index: 1001;
+  }
+
+  /* Mobile nav: hidden by default, transparent background */
+  .nav {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    padding: 20px 0;
+    gap: 16px;
+    background-color: transparent; /* fully transparent */
+  }
+  #menu-toggle {
+    display: none;
+  }
+  #menu-toggle:checked + .hamburger + .nav {
+    display: flex;
+  }
 
   /* Hero spacing */
   .main { padding-top: 180px; width: 92%; }
@@ -160,78 +194,4 @@ body {
   .cta-button { width: 85%; max-width: 320px; height: 42px; font-size: 13px; margin-top: 28px; }
 
   /* Info section */
-  .info-full { padding: 60px 16px; }
-  .info-icons { flex-direction: column; gap: 22px; }
-  .icon-item { width: 100%; height: auto; }
-
-  /* Hero 2: keep 650px, reduce internal gaps */
-  .hero-full { height: 650px; padding-top: 60px; }
-  .hero-2-box { width: 92%; margin-bottom: 30px; }
-  .pentagon-grid { gap: 28px; }
-  .pentagon { width: 150px; height: 150px; }
-  .pentagon-value { font-size: 36px; }
-
-  /* Line section: keep height */
-  .line-section { height: 613px; padding: 0 16px; }
-  .line { width: 82%; max-width: 335px; margin: 18px 0; }
-
-  /* Footer: keep 249px, align horizontally on top row */
-  .social-page { height: 249px; padding: 0 16px; }
-  .social-top { height: 160px; }
-  .social-left img { height: 34px; }
-  .social-right { gap: 16px; }
-  .icon { width: 26px; height: 26px; }
-  .social-bottom { height: 89px; }
-}
-/* Hamburger toggle (mobile only) */
-#menu-toggle {
-  display: none;
-}
-
-.hamburger {
-  display: none;
-  font-size: 28px;
-  cursor: pointer;
-  color: #fff;
-  z-index: 1001;
-}
-
-@media screen and (max-width: 768px) {
-  .hamburger {
-    display: block;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-  }
-
-  .nav {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    background-color: #071629;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    right: 0;
-    padding: 20px 0;
-    gap: 16px;
-  }
-
-  #menu-toggle:checked + .hamburger + .nav {
-    display: flex;
-  }
-}
-
-/* Force full-width alignment on mobile */
-@media screen and (max-width: 768px) {
-  .hero-full,
-  .line-section,
-  .social-page,
-  .info-full,
-  .container {
-    width: 100% !important;
-    max-width: 100% !important;
-    margin: 0 auto;
-    box-sizing: border-box;
-  }
-}
+  .info-full { padding: 60px
