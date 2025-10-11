@@ -2,52 +2,41 @@
 body {
   margin: 0;
   font-family: 'Source Sans Pro', sans-serif;
-  background: url("images/headphones_hero_1.jpg") no-repeat center center;
+  background: url("images/headphones_hero_1.jpg") no-repeat center center fixed;
   background-size: cover;
-  background-attachment: fixed;
-  background-position: center center;
-  min-height: 100vh;
   color: #fff;
 }
 
-/* Container */
+/* Container (hero) */
 .container {
   max-width: 1000px;
   margin: 0 auto;
   padding: 20px;
+  box-sizing: border-box;
+  position: relative;
+  height: 800px; /* fixed height for desktop */
 }
 
-/* Header */
+/* Header (desktop) */
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 30px 0;
-  width: 100%;
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
+  top: 0; left: 0; right: 0;
 }
-
 .logo {
   position: absolute;
   left: 180px;
 }
-
-.logo img {
-  height: 50px;
-  width: auto;
-  display: block;
-}
-
+.logo img { height: 50px; display: block; }
 .nav {
   position: absolute;
   right: 200px;
   display: flex;
   gap: 20px;
 }
-
 .nav a {
   color: #fff;
   text-decoration: none;
@@ -55,23 +44,13 @@ body {
   padding: 8px 12px;
   transition: color 0.3s ease;
 }
+.nav a:hover, .nav a:active { color: #FF6565; }
+.hamburger { display: none; }
 
-.nav a:hover,
-.nav a:active {
-  color: #FF6565;
-}
+/* Hide the checkbox always (prevents visible input on desktop) */
+#menu-toggle { display: none; }
 
-.hamburger {
-  display: none;
-  font-size: 28px;
-  cursor: pointer;
-  position: absolute;
-  top: 30px;
-  left: 20px;
-  z-index: 1000;
-}
-
-/* Main hero */
+/* Main hero content */
 .main {
   display: flex;
   flex-direction: column;
@@ -80,22 +59,12 @@ body {
   width: 90%;
   max-width: 800px;
   margin: 0 auto;
-  padding-top: 380px;
+  padding-top: 200px; /* initial spacing so content sits nicely within 800px hero */
 }
+.main h1 { font-size: 32px; font-weight: 700; margin-bottom: 20px; }
+.subheading { font-size: 16px; font-weight: 700; margin: 0; }
 
-.main h1 {
-  font-size: 32px;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-
-.subheading {
-  font-size: 16px;
-  font-weight: 700;
-  margin: 0;
-}
-
-/* Unified button style */
+/* Button */
 .cta-button {
   background-color: #FF6565;
   color: #fff;
@@ -106,53 +75,38 @@ body {
   font-size: 14px;
   font-weight: 700;
   cursor: pointer;
-  margin-top: 60px; /* pushed down */
+  margin-top: 60px;
   transition: opacity 0.3s ease;
 }
+.cta-button:hover, .cta-button:active { opacity: 0.9; }
 
-.cta-button:hover,
-.cta-button:active {
-  opacity: 0.9;
-}
-
-/* Hero description box */
+/* Description box */
 .description-box {
   width: 637px;
   min-height: 114px;
-  height: auto;        /* auto expand */
+  height: auto;
   margin: 90px auto 0;
-  background-color: transparent;
-  overflow: visible;   /* no clipping */
+  background: transparent;
+  overflow: visible;
   padding: 10px;
   border-radius: 8px;
   box-sizing: border-box;
 }
-
-.main-description {
-  font-size: 16px;
-  font-weight: 300;
-  text-align: center;
-  line-height: 1.6;
-  margin: 0;
-}
+.main-description { font-size: 16px; font-weight: 300; line-height: 1.6; margin: 0; }
 
 /* Info Section */
 .info-full {
-  width: 100vw;
+  width: 100%;
   background-color: #fff;
   color: #000;
   display: flex;
   justify-content: center;
   padding: 100px 20px;
   box-sizing: border-box;
+  min-height: 600px;
+  height: auto;
 }
-
-.info-inner {
-  max-width: 1200px;
-  width: 100%;
-  text-align: center;
-}
-
+.info-inner { max-width: 1200px; width: 100%; text-align: center; }
 .info-box {
   background-color: rgba(255, 255, 255, 0.2);
   padding: 20px;
@@ -160,13 +114,7 @@ body {
   max-width: 800px;
   margin: 0 auto 60px;
 }
-
-.info-text {
-  font-size: 14px;
-  line-height: 1.6;
-  margin: 0;
-}
-
+.info-text { font-size: 14px; line-height: 1.6; margin: 0; }
 .info-icons {
   display: flex;
   justify-content: center;
@@ -175,7 +123,6 @@ body {
   flex-wrap: wrap;
   margin-top: 40px;
 }
-
 .icon-item {
   display: flex;
   flex-direction: column;
@@ -185,147 +132,170 @@ body {
   height: 220px;
   text-align: center;
 }
+.icon-item img { width: 80px; margin-bottom: 12px; transition: transform 0.3s ease; }
+.icon-item img:hover { transform: scale(1.1); }
+.icon-item p { font-size: 14px; margin: 0; line-height: 1.4; }
 
-.icon-item img {
-  width: 80px;
-  margin-bottom: 12px;
-  transition: transform 0.3s ease;
-}
-
-.icon-item img:hover {
-  transform: scale(1.1);
-}
-
-.icon-item p {
-  font-size: 14px;
-  margin: 0;
-  line-height: 1.4;
-}
-
-/* 2: Pentagon Section (headphones_hero_2) */
+/* 2: Headphones hero 2 */
 .hero-full {
-  width: 100vw;
-  height: 650px; /* fixed height */
+  width: 100%;
   background: url("images/headphones_hero_2.jpg") no-repeat center center;
   background-size: cover;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  padding-top: 100px;
+  padding: 100px 20px;
   box-sizing: border-box;
+  min-height: 650px;
+  height: auto;
 }
-
-.hero-2-box {
-  width: 637px;
-  min-height: 104px;
-  text-align: center;
-  margin-bottom: 80px;
-}
-
-.hero-2-box p {
-  font-size: 16px;
-  font-weight: 400;
-  color: #fff;
-  line-height: 1.4;
-}
-
-.pentagon-grid {
-  display: flex;
-  gap: 60px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
+.hero-2-box { width: 637px; min-height: 104px; text-align: center; margin-bottom: 60px; }
+.hero-2-box p { font-size: 16px; font-weight: 400; color: #fff; line-height: 1.4; }
+.pentagon-grid { display: flex; gap: 60px; flex-wrap: wrap; justify-content: center; }
 .pentagon {
   width: 190px;
   height: 190px;
-  background: url("images/pentagone.png") no-repeat center center;
-  background-size: contain;
+  background: url("images/pentagone.png") no-repeat center center / contain;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+.pentagon-value { font-size: 46px; font-weight: 700; color: #fff; margin: 0 0 12px; }
+.pentagon-label { font-size: 14px; color: #fff; margin: 0; }
 
-.pentagon-value {
-  font-size: 46px;
-  font-weight: 700;
-  color: #fff;
-  margin: 0 0 12px 0;
-}
-
-.pentagon-label {
-  font-size: 14px;
-  color: #fff;
-  margin: 0;
-}
-
-/* 3: Line Section (white background) */
+/* 3: Line Section (white) */
 .line-section {
-  width: 100vw;
-  height: 613px; /* fixed height */
+  width: 100%;
   background-color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 60px 20px;
+  box-sizing: border-box;
+  min-height: 400px;
+  height: auto;
 }
+.line-box { display: flex; flex-direction: column; align-items: center; }
+.line { width: 335px; height: 1px; background-color: rgba(7, 22, 41, 0.175); margin: 30px 0; }
 
-.line-box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.line {
-  width: 335px;
-  height: 1px;
-  background-color: rgba(7, 22, 41, 0.175);
-  margin: 30px 0;
-}
-
-/* 4: Footer Section (#071629) */
-/* 4: Footer Section (#071629) */
-/* Footer Section */
+/* 4: Footer (#071629) */
 .social-page {
-  width: 100vw;
-  height: 249px;
+  width: 100%;
   background-color: #071629;
   display: flex;
-  flex-direction: column;   /* stack top and bottom */
-  justify-content: space-between;
-  padding: 0 80px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  padding: 40px 20px;
   box-sizing: border-box;
+  min-height: 249px;
+  height: auto;
 }
-
 .social-top {
   display: flex;
-  justify-content: space-between; /* logo left, icons right */
+  justify-content: space-between;
   align-items: center;
-  flex: 1; /* take available space */
+  height: 170px;
 }
-
-.social-left img {
-  height: 40px;
-}
-
-.social-right {
-  display: flex;
-  gap: 20px;
-}
-
-.icon {
-  width: 30px;
-  height: 30px;
-}
-
+.social-left img { height: 40px; }
+.social-right { display: flex; gap: 20px; }
+.icon { width: 30px; height: 30px; }
 .social-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 79px;
   text-align: center;
-  padding-bottom: 10px;
+}
+.social-bottom p { color: rgba(255, 255, 255, 0.35); font-size: 14px; margin: 0; }
+
+/* ------------------------- */
+/* Responsive (tablet/phone) */
+/* ------------------------- */
+
+@media screen and (max-width: 1024px) {
+  .logo { position: static; }
+  .header { position: relative; padding: 20px 0; }
+  .nav { position: static; right: auto; gap: 16px; }
+  .description-box { width: 90%; margin: 60px auto 0; }
+  .hero-2-box { width: 90%; }
 }
 
-.social-bottom p {
-  color: rgba(255, 255, 255, 0.35);
-  font-size: 14px;
-  margin: 0;
+/* Mobile rules */
+@media screen and (max-width: 768px) {
+  /* container fixed height for phone */
+  .container { height: 869px; }
+
+  /* Header: logo centered, hamburger left */
+  .header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 0;
+  }
+  .logo {
+  position: static;
+  margin: 0 auto;
+}
+
+.header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 0;
+  padding-left: 60px; /* creates space between hamburger and logo */
+}
+  .hamburger {
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 28px;
+    cursor: pointer;
+    color: #fff;
+    z-index: 1001;
+  }
+
+  /* Mobile nav: hidden by default, transparent background */
+  .nav {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    padding: 20px 0;
+    gap: 16px;
+    background-color: transparent !important;
+  }
+  #menu-toggle:checked + .hamburger + .nav { display: flex; }
+
+  /* Adjust hero content spacing for phone */
+  .main { padding-top: 160px; width: 92%; }
+  .main h1 { font-size: 24px; }
+  .subheading { font-size: 14px; }
+
+  /* Tweak description and CTA sizing for phone */
+  .description-box { width: 92%; margin: 30px auto 0; padding: 8px; }
+  .main-description { font-size: 14px; line-height: 1.5; }
+  .cta-button { width: 85%; max-width: 320px; height: 42px; font-size: 13px; margin-top: 28px; }
+
+  /* Info section spacing for phone */
+  .info-full { padding: 60px 16px; min-height: 0; }
+  .info-icons { gap: 28px; }
+  .icon-item { width: 120px; height: auto; }
+
+  /* Hero 2 and other sections adjustments */
+  .hero-full { padding: 80px 16px; min-height: 0; }
+  .pentagon { width: 150px; height: 150px; }
+  .pentagon-value { font-size: 36px; }
+
+  .line-section { padding: 40px 16px; min-height: 0; }
+  .social-top { flex-direction: column; gap: 20px; height: auto; padding-bottom: 20px; }
+  .social-bottom { height: auto; padding: 16px 0; }
 }

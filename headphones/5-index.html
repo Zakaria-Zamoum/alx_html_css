@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Headphones Landing Page</title>
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="5-styles.css" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
@@ -15,7 +15,11 @@
       <div class="logo">
         <img src="images/logo_headphones.png" alt="Headphones Logo" />
       </div>
-      <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+      <!-- Hamburger toggle -->
+      <input type="checkbox" id="menu-toggle" />
+      <label for="menu-toggle" class="hamburger">☰</label>
+
       <nav class="nav">
         <a href="#">What we do</a>
         <a href="#">Our results</a>
@@ -109,25 +113,22 @@
     </div>
   </section>
 
-<section class="social-page">
-  <div class="social-top">
-    <div class="social-left">
-      <img src="images/logo_headphones.png" alt="Logo" class="logo" />
+  <!-- 4: Footer Section -->
+  <section class="social-page">
+    <div class="social-top">
+      <div class="social-left">
+        <img src="images/logo_headphones.png" alt="Logo" class="logo" />
+      </div>
+      <div class="social-right">
+        <img src="images/facebook.png" alt="Facebook" class="icon" />
+        <img src="images/twitter.png" alt="Twitter" class="icon" />
+        <img src="images/instagram.png" alt="Instagram" class="icon" />
+      </div>
     </div>
-    <div class="social-right">
-      <img src="images/facebook.png" alt="Facebook" class="icon" />
-      <img src="images/twitter.png" alt="Twitter" class="icon" />
-      <img src="images/instagram.png" alt="Instagram" class="icon" />
+    <div class="social-bottom">
+      <p>©headphones 2020</p>
     </div>
-  </div>
-  <div class="social-bottom">
-    <p>©headphones 2020</p>
-  </div>
-</section>
-  <script>
-    function toggleMenu() {
-      document.querySelector('.nav').classList.toggle('show');
-    }
-  </script>
+  </section>
+
 </body>
 </html>
