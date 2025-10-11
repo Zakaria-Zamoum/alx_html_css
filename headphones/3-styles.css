@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.line-section {
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.line-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.line {
+  width: 335px;
+  height: 1px;
+  background-color: rgba(7, 22, 41, 0.175); 
+margin: 30px 0;
+}
+.line-button {
+  background-color: #FF6565;
+  color: #fff;
+  border: none;
+  border-radius: 32px;
+  width: 162px;
+  height: 44px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 40px;
+  transition: opacity 0.3s ease;
+
+}
