@@ -41,6 +41,11 @@ body {
 .nav a:hover, .nav a:active { color: #FF6565; }
 .hamburger { display: none; }
 
+/* Always hide the checkbox */
+#menu-toggle {
+  display: none;
+}
+
 /* Main hero */
 .main {
   display: flex; flex-direction: column; align-items: center; text-align: center;
@@ -67,8 +72,15 @@ body {
 
 /* Info Section */
 .info-full {
-  width: 100vw; background-color: #fff; color: #000;
-  display: flex; justify-content: center; padding: 100px 20px; box-sizing: border-box;
+  width: 100%;
+  background-color: #fff;
+  color: #000;
+  display: flex;
+  justify-content: center;
+  padding: 100px 20px;
+  box-sizing: border-box;
+  min-height: 600px;
+  height: auto;
 }
 .info-inner { max-width: 1200px; width: 100%; text-align: center; }
 .info-box {
@@ -89,9 +101,14 @@ body {
 
 /* 2: Headphones hero 2 */
 .hero-full {
-  width: 100vw; height: 650px; background: url("images/headphones_hero_2.jpg") no-repeat center center;
-  background-size: cover; display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
-  padding-top: 100px; box-sizing: border-box;
+  width: 100%;
+  background: url("images/headphones_hero_2.jpg") no-repeat center center;
+  background-size: cover;
+  display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
+  padding: 100px 20px;
+  box-sizing: border-box;
+  min-height: 650px;
+  height: auto;
 }
 .hero-2-box { width: 637px; min-height: 104px; text-align: center; margin-bottom: 60px; }
 .hero-2-box p { font-size: 16px; font-weight: 400; color: #fff; line-height: 1.4; }
@@ -105,17 +122,26 @@ body {
 
 /* 3: Line Section (white) */
 .line-section {
-  width: 100vw; height: 613px; background-color: #fff;
+  width: 100%;
+  background-color: #fff;
   display: flex; justify-content: center; align-items: center;
+  padding: 60px 20px;
+  box-sizing: border-box;
+  min-height: 400px;
+  height: auto;
 }
 .line-box { display: flex; flex-direction: column; align-items: center; }
 .line { width: 335px; height: 1px; background-color: rgba(7, 22, 41, 0.175); margin: 30px 0; }
 
 /* 4: Footer (#071629) */
 .social-page {
-  width: 100vw; height: 249px; background-color: #071629;
+  width: 100%;
+  background-color: #071629;
   display: flex; flex-direction: column; justify-content: center; align-items: stretch;
-  padding: 0 80px; box-sizing: border-box;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  min-height: 249px;
+  height: auto;
 }
 .social-top {
   display: flex; justify-content: space-between; align-items: center;
@@ -153,6 +179,7 @@ body {
   .logo {
     position: static;
     margin: 0 auto;
+    margin-left: 48px; /* add space so it doesn't collide with hamburger */
   }
   .hamburger {
     display: block;
@@ -176,10 +203,7 @@ body {
     right: 0;
     padding: 20px 0;
     gap: 16px;
-    background-color: transparent; /* fully transparent */
-  }
-  #menu-toggle {
-    display: none;
+    background-color: transparent !important;
   }
   #menu-toggle:checked + .hamburger + .nav {
     display: flex;
@@ -187,11 +211,4 @@ body {
 
   /* Hero spacing */
   .main { padding-top: 180px; width: 92%; }
-  .main h1 { font-size: 24px; }
-  .subheading { font-size: 14px; }
-  .description-box { width: 92%; margin: 30px auto 0; padding: 8px; }
-  .main-description { font-size: 14px; line-height: 1.5; }
-  .cta-button { width: 85%; max-width: 320px; height: 42px; font-size: 13px; margin-top: 28px; }
-
-  /* Info section */
-  .info-full { padding: 60px
+  .main h1 { font-size: 24px
