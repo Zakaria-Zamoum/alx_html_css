@@ -1,0 +1,55 @@
+body {
+  margin: 0;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.social-page {
+  width: 100vw;
+  height: 100vh;
+  background-color: #071629;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Middle-left logo */
+.social-left {
+  position: absolute;
+  left: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.logo {
+  max-height: 40px;
+}
+
+/* Middle-right icons */
+.social-right {
+  position: absolute;
+  right: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  gap: 20px;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+}
+
+/* Bottom center text */
+.social-bottom {
+  position: absolute;
+  bottom: 300px;
+  text-align: center;
+}
+
+.social-bottom p {
+  color: rgba(255, 255, 255, 0.3517); /* white with 35.17% opacity */
+  font-size: 14px;
+  font-weight: 400;
+}
